@@ -1,28 +1,45 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+   <h1>TO DO:</h1> 
+    <Todos />
+    <AddTask />
+    <Filters />
+    <Demo />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Todos from "./components/Todos.vue";
+import AddTask from "./components/AddTask.vue";
+import Filters from "./components/Filters.vue";
+import Demo from "./components/Demo.vue";
+
 
 export default {
   name: "app",
   components: {
-    HelloWorld
+    Todos,
+    AddTask,
+    Filters,
+    Demo
   }
 };
 </script>
 
 <style>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 2.2em;
+  text-align: left;
+  color: #1ba29c;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #333;
+  font-size: 0.8em;
+  letter-spacing: 5px;
 }
 </style>
