@@ -8,9 +8,9 @@ I went the frontend route, as I feel todo apps are more frontend things (backend
 I built this in Vue from scratch. The TodoMVC version was very out of date (3 years) and I figured I wouldn't save much time using that version considering there'd be a ramp-up time reading the out-of-date code. 
 
 ## Accomplishments
-I got it as near pixel-perfect as I could. I had to use a font scanner to guess this was Open Sans. Also, in the 'Show' buttons, there is inconsistent padding around the words in the mocks, I made an assumption that this should be consistent. 
+I got it as near pixel-perfect as I could. I had to use a font scanner to guess the font used was Open Sans. Also, in the 'Show' buttons, there is inconsistent padding around the words in the mocks, I made them consistent. 
 
-The checkboxes were difficult, since this feels like an asset that would normally come with an SVG -- I had to try to replicate it the best I could (it's not perfect), and SVGs aren't something I've made before. I think it turned out alright, although I'd have cleaned up the uncheck animation (right now it just refreshes, rather than animates back).
+The checkboxes were difficult, since this feels like an asset that would normally come with an SVG -- I had to try to replicate it the best I could (it's not perfect), and SVGs aren't something I've made before. I think it turned out alright, although I'd have cleaned up the uncheck animation if I had more time (right now it just refreshes, rather than animates back).
 
 The Add Task button slides out an input, and cancel/submit buttons. The form will respond to Enter and Escape as well. 
 
