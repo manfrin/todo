@@ -1,0 +1,17 @@
+{
+  "name": "todo",
+  "type": "static",
+  "static": {
+    "public": "dist",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "alias": "todo.manfrincdn.com",
+  "files": [
+    "dist"
+  ]
+}
