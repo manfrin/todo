@@ -2,22 +2,26 @@
   <div id="filters">
     <h2>Show:</h2>
     <div id="filter-buttons">
-      <FilterButton v-for='filterText in filterTypes' :filterText='filterText' :key='filterText' />
+      <FilterButton
+        v-for="filterText in filterTypes"
+        :filterText="filterText"
+        :key="filterText"
+      />
     </div>
   </div>
 </template>
 
 <script>
-import FilterButton from './FilterButton.vue'
-import { mapState } from 'vuex';
+import FilterButton from "./FilterButton.vue";
+import { mapState } from "vuex";
 
 export default {
   name: "Filters",
   components: { FilterButton },
   computed: {
-    ...mapState(['filterTypes'])
+    ...mapState(["filterTypes"])
   }
-}
+};
 </script>
 
 <style>

@@ -1,9 +1,15 @@
 <template>
-  <div @click="setFilter" class="filter-button" :class="[isActive ? 'selected' : '']">{{ filterText }}</div>
+  <div
+    @click="setFilter"
+    class="filter-button"
+    :class="[isActive ? 'selected' : '']"
+  >
+    {{ filterText }}
+  </div>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState } from "vuex";
 
 export default {
   name: "FilterType",
@@ -11,17 +17,17 @@ export default {
     filterText: String
   },
   methods: {
-    setFilter () {
-      this.$store.dispatch('setFilter', this.filterText)
+    setFilter() {
+      this.$store.dispatch("setFilter", this.filterText);
     }
   },
   computed: {
-    ...mapState(['filterType']),
-    isActive () {
-      return this.filterType === this.filterText
+    ...mapState(["filterType"]),
+    isActive() {
+      return this.filterType === this.filterText;
     }
   }
-}
+};
 </script>
 
 <style>
@@ -33,7 +39,7 @@ export default {
   box-shadow: #333 1px 1px;
   border: 2px solid #476074;
   display: inline-flex;
-  font-size: .5em;
+  font-size: 0.5em;
   letter-spacing: 5px;
   text-transform: uppercase;
   font-weight: 600;

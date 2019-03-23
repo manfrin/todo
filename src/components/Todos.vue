@@ -1,11 +1,11 @@
 <template>
   <div id="todos">
-    <Todo v-for='todo in todos' :key='todo.id' :todo='todo' />
+    <Todo v-for="todo in todos" :key="todo.id" :todo="todo" />
   </div>
 </template>
 
 <script>
-import {mapState} from "vuex"
+import { mapState } from "vuex";
 import Todo from "./Todo.vue";
 
 export default {
@@ -14,10 +14,9 @@ export default {
     Todo
   },
   computed: {
-    ...mapState(['todos'])
+    ...mapState(["todos"])
   }
 };
 </script>
 
-<style>
-</style>
+<style></style>

@@ -1,12 +1,13 @@
 <template>
-  <div class="todo" :class='classObject'>
-    <Checkmark :checked='todo.completed' :id='todo.id' /> <span>{{ todo.text }}</span>
+  <div class="todo" :class="classObject">
+    <Checkmark :checked="todo.completed" :id="todo.id" />
+    <span>{{ todo.text }}</span>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex';
-import Checkmark from './Checkmark.vue'
+import { mapState } from "vuex";
+import Checkmark from "./Checkmark.vue";
 
 export default {
   name: "Todo",
@@ -18,23 +19,20 @@ export default {
   },
   computed: {
     visibleInFilters() {
-      return this.todo.completed ? 
-        ['all', 'completed'] :
-        ['all', 'active']
+      return this.todo.completed ? ["all", "completed"] : ["all", "active"];
     },
     shouldShow() {
-      return this.visibleInFilters.includes(this.filterType)
+      return this.visibleInFilters.includes(this.filterType);
     },
     classObject() {
       return {
         completed: this.todo.completed,
         hidden: !this.shouldShow
-      }
+      };
     },
-    ...mapState(['filterType']),
-  },
-
-}
+    ...mapState(["filterType"])
+  }
+};
 </script>
 
 <style scoped>

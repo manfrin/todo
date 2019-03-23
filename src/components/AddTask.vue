@@ -1,11 +1,17 @@
 <template>
   <div id="addTask" :class="[active ? 'active' : '']">
-    <input type='text' v-model='text' ref="newTaskBox" @keyup.enter="addNewTask" @keyup.escape="reset"/>
+    <input
+      type="text"
+      v-model="text"
+      ref="newTaskBox"
+      @keyup.enter="addNewTask"
+      @keyup.escape="reset"
+    />
     <div id="buttonContainer">
-      <div id="cancelButton" class='addButton' @click='reset'>
+      <div id="cancelButton" class="addButton" @click="reset">
         Cancel
       </div>
-      <div id="addTaskButton" class='addButton' @click='newTaskOrSubmit'>
+      <div id="addTaskButton" class="addButton" @click="newTaskOrSubmit">
         {{ addTaskButtonText }}
       </div>
     </div>
@@ -15,37 +21,35 @@
 <script>
 export default {
   name: "AddTask",
-  data () {
+  data() {
     return {
-      text: '',
+      text: "",
       active: false
-    }
+    };
   },
   methods: {
-    newTaskOrSubmit () {
-      this.active ?
-        this.addNewTask() :
-        this.newTask()
+    newTaskOrSubmit() {
+      this.active ? this.addNewTask() : this.newTask();
     },
-    newTask () {
-      this.active = true
-      this.$refs.newTaskBox.focus()
+    newTask() {
+      this.active = true;
+      this.$refs.newTaskBox.focus();
     },
-    addNewTask () {
-      this.$store.dispatch('addTask', this.text)
-      this.reset()
+    addNewTask() {
+      this.$store.dispatch("addTask", this.text);
+      this.reset();
     },
-    reset () {
-      this.active = false
-      this.text = ''
+    reset() {
+      this.active = false;
+      this.text = "";
     }
   },
   computed: {
-    addTaskButtonText () {
-      return this.active ? 'Submit' : '+ Add Task'
+    addTaskButtonText() {
+      return this.active ? "Submit" : "+ Add Task";
     }
   }
-}
+};
 </script>
 
 <style>
@@ -81,15 +85,15 @@ input {
   color: #fff;
   display: inline-flex;
   justify-content: center;
-  font-size: .7em;
+  font-size: 0.7em;
   letter-spacing: 5px;
   line-height: 2em;
   text-transform: uppercase;
   font-weight: 700;
-  transition: .5s;
+  transition: 0.5s;
 }
 
-#addTaskButton { 
+#addTaskButton {
   background-color: #1ba29c;
 }
 

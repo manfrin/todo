@@ -2,7 +2,7 @@
   <div id="demo">
     <h2>Demo Mode:</h2>
     <div id="demo-buttons">
-       <div @click="populate" class="filter-button">Populate with Data</div>
+      <div @click="populate" class="filter-button">Populate with Data</div>
     </div>
   </div>
 </template>
@@ -11,11 +11,11 @@
 export default {
   name: "Demo",
   methods: {
-    populate () {
-      this.$store.dispatch('populate')
+    populate() {
+      this.$store.dispatch("populate");
     }
   }
-}
+};
 </script>
 
 <style>

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-   <h1>TO DO:</h1> 
+    <h1>TO DO:</h1>
     <Todos />
     <AddTask />
     <Filters />
@@ -13,7 +13,6 @@ import Todos from "./components/Todos.vue";
 import AddTask from "./components/AddTask.vue";
 import Filters from "./components/Filters.vue";
 import Demo from "./components/Demo.vue";
-
 
 export default {
   name: "app",
@@ -28,7 +27,7 @@ export default {
 
 <style>
 #app {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 2.2em;
   text-align: left;
